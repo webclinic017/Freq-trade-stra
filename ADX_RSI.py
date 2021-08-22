@@ -14,8 +14,7 @@ from freqtrade.strategy.hyper import DecimalParameter, IntParameter
 
 import logging
 logger = logging.getLogger(__name__)
-###Hyperopt this for ROI and Stoploss
-###
+###Hyperopt this spaces buy roi stoploss
 
 class ADX_RSI(IStrategy):
     buy_rsi = IntParameter(10, 30, default=29, space="buy") 
