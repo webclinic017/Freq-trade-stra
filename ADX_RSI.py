@@ -14,27 +14,29 @@ from freqtrade.strategy.hyper import DecimalParameter, IntParameter
 
 import logging
 logger = logging.getLogger(__name__)
-###Hyperopt this spaces buy roi stoploss
+###Hyperopt this for buy, roi, and Stoploss
+###
 
 class ADX_RSI(IStrategy):
     buy_rsi = IntParameter(10, 30, default=29, space="buy") 
     buy_adx = IntParameter(25, 40, default=39, space="buy")
-    #sell_rsi = IntParameter(70, 95, default=70, space="sell")
+    #sell_rsi = IntParameter(70, 95, default=84, space="sell")
       
    
-    #105/2000:   1244 trades. 741/494/9 Wins/Draws/Losses. Avg profit   0.68%. Median profit   0.22%. ((225 days))
-    #Total profit  12492.51785256 USD ( 1249.25%). Avg duration 7:42:00 min. Objective: -22.71919
+    # 268/900:   1192 trades. 703/480/9 Wins/Draws/Losses. Avg profit   0.79%. Median profit   0.23%.
+    #Total profit  17633.12217579 USD ( 1763.31%). Avg duration 8:10:00 min. Objective: -26.64723
 
     # ROI table:
     minimal_roi = {
-        "0": 0.154,
-        "11": 0.08,
-        "34": 0.026,
-        "80": 0
+        "0": 0.124,
+        "18": 0.1,
+        "60": 0.033,
+        "90": 0
     }
 
     # Stoploss:
-    stoploss = -0.346
+    stoploss = -0.322
+
    
     # Trailing stop:
     trailing_stop = False
