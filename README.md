@@ -3,6 +3,8 @@ Freqtrade strategy
 
 Strategies intended for use with Freqtrade, use them at your own risk.
 I take no responsibility for lost money/crypto related to these strategies. 
+# Always backtest and Hyperopt every strategy for current market conditions.
+I prefer Sortino, but occasionally I use Sharpe as well.
 
 If you want to collaborate with me please reach out via discord jadex#0557
 
