@@ -93,7 +93,7 @@ class TRSI(IStrategy):
             (
                 (dataframe["rsi1"] <= self.buy_rsi1.value) & #Trigger
                 (dataframe["rsi2"] <= self.buy_rsi2.value) & #Trigger
-                (dataframe["cmf"] <= self.sell_cmf.value) & #Guard
+                (dataframe["cmf"] <= self.buy_cmf.value) & #Guard
                 (dataframe['volume'] > 0) # volume above zero
             )
         ,'buy'] = 1
